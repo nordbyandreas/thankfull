@@ -1,0 +1,138 @@
+
+
+/*************************************
+BACKGROUND AND TEXT
+*************************************/
+
+
+html{
+  min-height: 80%;
+  position: relative;
+  background-color: lightblue;
+}
+
+
+#wrapper{
+  min-height: 80%;
+  background-color: lightblue;
+
+    min-height: 80%;
+
+}
+
+
+
+h1{
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  font-size: 4em;
+
+}
+
+
+
+
+/*************************************
+FLEXBOX
+*************************************/
+
+
+.flex-container {
+  position: absolute;
+  top: 38%;
+  left: 35%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  width: 30%;
+  height: 30px;
+  background-color: lightblue;
+
+}
+
+.flex-item {
+  background-color: white;
+  width: 50px;
+  height: 10px;
+  margin: 10px;
+  border-radius: 10%;
+  text-align: center;
+  line-height: 100px;
+}
+
+#orange{
+  background-color: #FF6600;
+  flex-grow: 1;
+  order: 1;
+}
+#yellow{
+  background-color: #FFD700;
+  flex-grow: 3;
+  height: 15px;
+  order: 2;
+}
+#red{
+  background-color: #F9423A;
+  flex-grow: 1;
+  order: 3;
+}
+
+
+
+
+
+
+/*************************************
+ANIMATION
+*************************************/
+
+  #sun {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: -1.25em;
+    background: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.375em #FFD700;
+    animation: spin 12s infinite linear;
+  }
+  #rays {
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    display: block;
+    width: 0.375em;
+    height: 1.125em;
+    margin-left: -0.1875em;
+    background: #FFD700;
+    border-radius: 0.25em;
+    box-shadow: 0 5.375em #FFD700;
+  }
+  #rays:before,
+  #rays:after {
+    content: '';
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    display: block;
+    width: 0.375em;
+    height: 1.125em;
+    transform: rotate(60deg);
+    transform-origin: 50% 3.25em;
+    background: #FFD700;
+    border-radius: 0.25em;
+    box-shadow: 0 5.375em #FFD700;
+  }
+  #rays:before {
+    transform: rotate(120deg);
+  }
+
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
